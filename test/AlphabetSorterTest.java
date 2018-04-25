@@ -22,7 +22,7 @@ class AlphabetSorterTest {
     void sortStringWithSpace() {
         AlphabetSorter as = new AlphabetSorter("good morning");
         as.sort();
-        assertTrue(as.getSortedValue().equalsIgnoreCase("iooodggimnnr"),
+        assertTrue(as.getSortedValue().equalsIgnoreCase("iooodggmnnr"),
                 "String with space should be sorted correctly");
     }
 
@@ -30,7 +30,23 @@ class AlphabetSorterTest {
     void quickSortStringWithSpace() {
         AlphabetSorter as = new AlphabetSorter("good morning");
         as.quickSort();
-        assertTrue(as.getSortedValue().equalsIgnoreCase("iooodggimnnr"),
+        assertTrue(as.getSortedValue().equalsIgnoreCase("iooodggmnnr"),
                 "String with space should be sorted correctly");
+    }
+
+    @Test
+    void quickSortWithMixedCase() {
+        AlphabetSorter as = new AlphabetSorter("good morNing");
+        as.quickSort();
+        assertTrue(as.getSortedValue().equalsIgnoreCase("iooodggmNnr"),
+                "String with mixed cases should be sorted correctly");
+    }
+
+    @Test
+    void sortWithMixedCase() {
+        AlphabetSorter as = new AlphabetSorter("good morNing");
+        as.sort();
+        assertTrue(as.getSortedValue().equalsIgnoreCase("iooodggmNnr"),
+                "String with mixed cases should be sorted correctly");
     }
 }
