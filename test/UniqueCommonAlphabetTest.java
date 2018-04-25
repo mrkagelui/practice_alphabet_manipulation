@@ -17,7 +17,7 @@ class UniqueCommonAlphabetTest {
     void happyPath() {
         UniqueCommonAlphabet uca = new UniqueCommonAlphabet("characters", "alphabets");
         uca.process();
-        assertEquals("aetsh", uca.getCommonChars(),
+        assertEquals("aehst", uca.getCommonChars(),
                 "Should return all common characters");
         assertEquals("bclpr", uca.getUniqueChars(),
                 "Should return all unique characters");
@@ -27,7 +27,7 @@ class UniqueCommonAlphabetTest {
     void shouldBeCaseSensitive() {
         UniqueCommonAlphabet uca = new UniqueCommonAlphabet("charAcTers", "alphabeTs");
         uca.process();
-        assertEquals("aeTsh", uca.getCommonChars(),
+        assertEquals("Taehs", uca.getCommonChars(),
                 "Should return all common characters, one of which is upper case");
         assertEquals("Abclpr", uca.getUniqueChars(),
                 "Different case should be treated as unique");
