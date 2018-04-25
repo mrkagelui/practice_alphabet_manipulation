@@ -17,4 +17,4 @@
   * If the character is not found in the map, put it with 0 into the map;
   * If it is in the map and the value is at least 1 (so that this character appears in string 1 at least once), increase the value by 1.
 * After this, those characters with value 1 come only from string 1, and those with value 0 come only from string 2; greater than 1 means they appear in both
-* This approach takes O(m+n) time and space, m and n being the length of the two strings
+* This approach takes O(m+n) time and O(1) space (excluding the memory needed to hold the result apparently, otherwise it would be O(m+n) too), m and n being the length of the two strings
