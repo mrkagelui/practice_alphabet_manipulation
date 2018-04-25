@@ -15,11 +15,11 @@ class UniqueCommonAlphabetTest {
 
     @Test
     void happyPath() {
-        UniqueCommonAlphabet uca = new UniqueCommonAlphabet("characters", "alphabets");
+        UniqueCommonAlphabet uca = new UniqueCommonAlphabet("characters", "alphabetiis");
         uca.process();
         assertEquals("aehst", uca.getCommonChars(),
                 "Should return all common characters");
-        assertEquals("bclpr", uca.getUniqueChars(),
+        assertEquals("bcilpr", uca.getUniqueChars(),
                 "Should return all unique characters");
     }
 

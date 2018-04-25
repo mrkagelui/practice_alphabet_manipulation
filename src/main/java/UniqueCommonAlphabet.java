@@ -28,7 +28,12 @@ public class UniqueCommonAlphabet {
             charMap.put(c, 1);
         }
         for (char c : string2.toCharArray()) {
-            charMap.put(c, charMap.getOrDefault(c, 0) + 1);
+            if (charMap.containsKey(c) && charMap.get(c) >= 1) {
+                charMap.put(c, charMap.get(c) + 1);
+            }
+            else {
+                charMap.put(c, 0);
+            }
         }
         List<Character> uniques = new ArrayList<>();
         List<Character> commons = new ArrayList<>();
