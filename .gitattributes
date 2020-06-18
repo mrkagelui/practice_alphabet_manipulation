@@ -1,2 +1,2 @@
-ling-generated linguist-generated=true
-ling-vendored linguist-vendored=true
+ling-generated/* linguist-generated=true
+ling-vendored/* linguist-vendored=true
